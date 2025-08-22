@@ -21,6 +21,9 @@ export const CardPage = () => {
                 accept="image/*"
                 maxFileSize={20000000}
                 emptyTemplate={<span />}
+                onUpload={() => {
+                    navigate(`/cards/${cardId}`)
+                }}
             />
         </Card>
          

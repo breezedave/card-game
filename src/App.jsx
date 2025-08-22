@@ -19,6 +19,7 @@ function App() {
         <Route path="chooseCard" element={<ChooseCardPage/>} />
         <Route path="card/:cardId" element={<CardPage/>} />
         <Route path="cards" element={<CardsPage/>} />
+        <Route path="cards/:cardId" element={<CardsPage/>} />
       </Routes>
 
     </>
