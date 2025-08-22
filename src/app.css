@@ -1,0 +1,14 @@
+body {
+    background-color: wheat;
+}
+
+.cardList {
+    margin: 10vh 10vw;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
