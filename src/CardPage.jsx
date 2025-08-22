@@ -14,14 +14,15 @@ export const CardPage = () => {
 
     return (
         <Card title={title} style={{margin: '10vh 10vw'}}>
-        <p>{description}</p>
-        <FileUpload
-            name={cardId}
-            url={`/api/upload/${cardId}`}
-            accept="image/*"
-            maxFileSize={20000000}
-            emptyTemplate={<span />} />
-            </Card>
+            <p>{description}</p>
+            <FileUpload
+                name={cardId}
+                url={`/api/upload/${cardId}`}
+                accept="image/*"
+                maxFileSize={20000000}
+                emptyTemplate={<span />}
+            />
+        </Card>
          
     )
 
