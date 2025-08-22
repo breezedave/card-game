@@ -17,7 +17,7 @@ export const CardPage = () => {
             <p>{description}</p>
             <FileUpload
                 name={cardId}
-                url={`/api/upload/${cardId}`}
+                url={`https://cqhqjb2hhtczmnnu6u2zxqj7gy0jctio.lambda-url.eu-west-2.on.aws?cardId=${cardId}`}
                 accept="image/*"
                 maxFileSize={20000000}
                 emptyTemplate={<span />}
