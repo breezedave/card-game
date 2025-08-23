@@ -55,7 +55,7 @@ export const CardsPage = () => {
             <div style={{marginBottom: '1rem'}}>Be the first to upload a picture {selectedCard?.length ? `for ${cardDetails?.[selectedCard]?.title}`: ''}</div>
             {selectedCard?.length ? (
                 <Button onClick={() => {
-                    navigate('/card/card1')
+                    navigate(`/card/${selectedCard}`)
                 }}>Upload</Button>
             ) : (
                 <Button onClick={() => {
