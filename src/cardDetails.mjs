@@ -151,6 +151,11 @@ const cardDetailsArray = [
       "description": "Pose between the couple in a group hug."
     },
     {
+      "title": "I'll regret that",
+      "category": "Family & Friends",
+      "description": "Do something you know you'll regret in the morning"
+    },
+    {
       "title": "Final Shot Challenge",
       "category": "Drinks",
       "description": "Get a group together for the last round of shots before close."
