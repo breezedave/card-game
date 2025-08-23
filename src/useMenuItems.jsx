@@ -6,14 +6,6 @@ export const useMenuItems = () => {
     
     return [
     {
-        label: 'Home',
-        icon: 'pi pi-home',
-        command: () => {
-            navigate('/home');
-        }
-        
-    },
-    {
         label: 'Upload',
         icon: 'pi pi-upload',
         command: () => {

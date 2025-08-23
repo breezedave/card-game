@@ -15,14 +15,9 @@ export const ChooseCardPage = () => {
     ))
     
     return (
-        <>
-            <div className="pageText">
-                <div>Photo Cards</div>
-            </div>
-            <div className="cardList">
-                {cards}
-            </div>
-        </>
+        <div className="cardList">
+            {cards}
+        </div>
     )
 
 }

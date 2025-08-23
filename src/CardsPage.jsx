@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { Image } from 'primereact/image';
 import { Card } from 'primereact/card';
+import { Button } from 'primereact/button'; 
 import { cardDetails } from './cardDetails';
 
 export const CardsPage = () => {
+    const navigate = useNavigate();
+    
     function encodeToken(token) {
         return encodeURIComponent(token);
     }
@@ -37,17 +40,33 @@ export const CardsPage = () => {
     const filteredImageList = imageList.filter(({key}) => !selectedCard?.length || key.startsWith(`${selectedCard}/`));
                 
 
-    const cards = filteredImageList.map(({url}) => (
-        <Card key={url} style={{width: '30rem'}} >
-            <Image src={url} alt="Image" width="100%" />
+    const cards = filteredImageList.map(({url}) => {
+        const urlCardId = url?.split('/')?.find((val) => val?.startsWith('card'))
+        
+        return (
+            <Card key={url} style={{width: '30rem'}} title={urlCardId ? cardDetails?.[urlCardId]?.title : undefined} >
+                <Image src={url} alt="Image" width="100%" />
+            </Card>
+        )
+    });
+
+    const noCards = (
+        <Card key="noCard" style={{width: '30rem'}} title="No Pictures">
+            <div style={{marginBottom: '1rem'}}>Be the first to upload a picture {selectedCard?.length ? `for ${cardDetails?.[selectedCard]?.title}`: ''}</div>
+            {selectedCard?.length ? (
+                <Button onClick={() => {
+                    navigate('/card/card1')
+                }}>Upload</Button>
+            ) : (
+                <Button onClick={() => {
+                    navigate('/chooseCard')
+                }}>Upload</Button>
+            )}
         </Card>
-    ))
+    )
 
     return (
         <>
-            <div className="pageText">
-                <div>Photo Cards</div>
-            </div>
             <div className='selectControl'>
                 <div>View photos for: </div>
                 <select defaultValue={cardId || ''} className="selectCard" name="selectCard" onChange={(event) => {
@@ -59,7 +78,7 @@ export const CardsPage = () => {
                 </select>
             </div>
             <div className="cardList">
-                {cards}
+                {filteredImageList?.length ? cards: noCards}
             </div>
         </>
     );

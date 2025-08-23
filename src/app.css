@@ -25,7 +25,8 @@ body {
     width: auto;
     align-items: center;
     gap: 1rem;
-    flex-wrap: wrap;  
+    flex-wrap: wrap; 
+    color: #333; 
     
     div {
         font-weight: 600;
@@ -35,8 +36,9 @@ body {
 .pageText {
     margin: 1rem;
     width: auto;
+    color: #333;
     
-    div {
+    div, p {
         font-weight: 600;
     }
 }

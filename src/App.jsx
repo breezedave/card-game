@@ -1,7 +1,6 @@
 import React from 'react'
 import { Route, Routes } from "react-router";
 import { CardPage } from './CardPage';
-import { HomePage } from './HomePage';
 import { CardsPage } from './CardsPage';
 import { ChooseCardPage } from './ChooseCardPage';
 import { Menubar } from 'primereact/menubar';
@@ -12,10 +11,9 @@ function App() {
   
   return (
     <>
-      <Menubar model={menuItems} />
+      <Menubar start={<h2 style={{padding: 0, margin: '0 1rem 0'}}>Photo Cards</h2>} model={menuItems} />
     
       <Routes>
-        <Route path="home" element={<HomePage/>} />
         <Route path="chooseCard" element={<ChooseCardPage/>} />
         <Route path="card/:cardId" element={<CardPage/>} />
         <Route path="cards" element={<CardsPage/>} />
