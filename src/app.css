@@ -3,7 +3,7 @@ body {
 }
 
 .cardList {
-    margin: 10vh 10vw;
+    margin: 2rem 5vw;
     display: flex;
     flex-direction: row;
     width: auto;
@@ -11,4 +11,32 @@ body {
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+.selectCard {
+    padding: .5rem;
+    border-radius: .25rem;
+}
+
+.selectControl {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;  
+    
+    div {
+        font-weight: 600;
+    }
+}
+
+.pageText {
+    margin: 1rem;
+    width: auto;
+    
+    div {
+        font-weight: 600;
+    }
 }

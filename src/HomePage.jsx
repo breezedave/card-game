@@ -1,6 +1,10 @@
 import React from 'react';
 
 export const HomePage = () => {
-    return <div>Home</div>
+    return (
+        <div className="pageText">
+            <div>Photo Cards</div>
+        </div>
+    )
 
 }
