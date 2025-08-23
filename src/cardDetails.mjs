@@ -36,6 +36,11 @@ const cardDetailsArray = [
       "description": "Track down the bride for a selfie together."
     },
     {
+      "title": "Selfie with the Groom",
+      "category": "The Happy Couple",
+      "description": "Track down the groom for a selfie together."
+    },
+    {
       "title": "Piggyback Ride",
       "category": "Family & Friends",
       "description": "Give or get a piggyback ride across the dance floor."
@@ -46,11 +51,6 @@ const cardDetailsArray = [
       "description": "Perform a dramatic air guitar solo to a rock song."
     },
     {
-      "title": "Drink Swap",
-      "category": "Drinks",
-      "description": "Swap drinks with another guest and take a sip."
-    },
-    {
       "title": "Dance Battle",
       "category": "Music & Dancing",
       "description": "Challenge someone to a dance-off."
@@ -59,6 +59,10 @@ const cardDetailsArray = [
       "title": "Shot with the Father of the Bride",
       "category": "Drinks",
       "description": "Convince the bride’s dad to take a shot with you."
+    },
+    {
+      "title": "Hug a Kiwi",
+      "description": "Find a New Zealander and give them a hug."
     },
     {
       "title": "Secret Handshake",
@@ -78,11 +82,6 @@ const cardDetailsArray = [
       "title": "Photo Bomb",
       "category": "Family & Friends",
       "description": "Sneak into someone else’s photo in a funny way."
-    },
-    {
-      "title": "Finish Their Drink",
-      "category": "Drinks",
-      "description": "With permission, finish off another guest’s drink."
     },
     {
       "title": "Find a Twin",
@@ -120,11 +119,6 @@ const cardDetailsArray = [
       "description": "Find the best man and take a shot together."
     },
     {
-      "title": "Stolen Dessert",
-      "category": "Wedding Traditions",
-      "description": "Sneak a bite of someone else’s dessert (with consent)."
-    },
-    {
       "title": "Silly Hat Hunt",
       "category": "Family & Friends",
       "description": "Find or improvise a funny hat and wear it on the dance floor."
@@ -150,14 +144,19 @@ const cardDetailsArray = [
       "description": "Dance barefoot in the middle of the floor."
     },
     {
+      "title": "It’s been a long night",
+      "category": "",
+      "description": "Snap a pic of someone sleeping"
+    },
+    {
       "title": "Bride & Groom Sandwich",
       "category": "The Happy Couple",
       "description": "Pose between the couple in a group hug."
     },
     {
-      "title": "I'll regret that",
+      "title": "I’ll regret that",
       "category": "Family & Friends",
-      "description": "Do something you know you'll regret in the morning"
+      "description": "Do something you know you’ll regret in the morning"
     },
     {
       "title": "Final Shot Challenge",
