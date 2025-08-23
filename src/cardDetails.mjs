@@ -162,6 +162,10 @@ const cardDetailsArray = [
       "title": "Final Shot Challenge",
       "category": "Drinks",
       "description": "Get a group together for the last round of shots before close."
+    },
+    {
+      "title": "I’m done",
+      "description": "Take a selfie at the end of your night"
     }
   ]
 
