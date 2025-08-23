@@ -16,6 +16,7 @@ export const CardsPage = () => {
     const { cardId } = useParams();
     const [selectedCard, setSelectedCard] = useState(cardId);
     const [imageList, setImageList] = useState([]);
+    const [firstRequest, setFirstRequest] = useState(false);
 
     const cardOptions = Object.entries(cardDetails).map(([cardId, {title, description}]) => ({
         cardId,
@@ -26,6 +27,7 @@ export const CardsPage = () => {
     useEffect(() => {
         const makeReq = ({token, images}) => {
             axios.get(`https://z7j4d4fyzxx253sgav4gdo2bby0ozjrn.lambda-url.eu-west-2.on.aws${token ? `?token=${encodeToken(token)}` : ''}`).then(({data}) => {
+                setFirstRequest(true);
                 images = [...images, ...data.items];
                 if(data.nextToken) {
                     return makeReq({token: data.nextToken, images});
@@ -50,7 +52,7 @@ export const CardsPage = () => {
         )
     });
 
-    const noCards = (
+    const noCards = firstRequest ? (
         <Card key="noCard" style={{width: '30rem'}} title="No Pictures">
             <div style={{marginBottom: '1rem'}}>Be the first to upload a picture {selectedCard?.length ? `for ${cardDetails?.[selectedCard]?.title}`: ''}</div>
             {selectedCard?.length ? (
@@ -63,7 +65,7 @@ export const CardsPage = () => {
                 }}>Upload</Button>
             )}
         </Card>
-    )
+    ): undefined;
 
     return (
         <>
