@@ -53,7 +53,7 @@ const cardDetailsArray = [
     {
       "title": "Dance Battle",
       "category": "Music & Dancing",
-      "description": "Challenge someone to a dance-off in the middle of the floor."
+      "description": "Challenge someone to a dance-off."
     },
     {
       "title": "Shot with the Father of the Bride",
@@ -64,6 +64,10 @@ const cardDetailsArray = [
       "title": "Secret Handshake",
       "category": "Family & Friends",
       "description": "Invent a handshake with someone and show it off."
+    },
+    {
+      "title": "Swapsies",
+      "description": "Swap an item of clothing with someone"
     },
     {
       "title": "Group Singalong",
