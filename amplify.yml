@@ -1,3 +1,16 @@
-env:
-  variables:
-    VERSION: vq
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: build   # or dist, depending on your framework
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
