@@ -79,11 +79,6 @@ export const cardDetailsArrayVq = [
     "description": "Track down a boss for a selfie together."
   },
   {
-    "title": "Shot with the Boss",
-    "category": "The Happy Couple",
-    "description": "Find someone important and take a shot together."
-  },
-  {
     "title": "To Do 1",
     "category": "To Do",
     "description": "To Do 1"
@@ -147,6 +142,11 @@ export const cardDetailsArrayVq = [
     "title": "To Do 13",
     "category": "To Do",
     "description": "To Do 13"
+  },
+  {
+    "title": "To Do 14",
+    "category": "To Do",
+    "description": "To Do 14"
   },
   {
     "title": "It’s been a long night",
