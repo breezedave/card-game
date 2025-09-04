@@ -2,6 +2,10 @@ body {
     background-color: #93c4b3;
 }
 
+.vq {
+    background-color: #80BCE8;
+}
+
 .cardList {
     margin: 2rem 5vw;
     display: flex;

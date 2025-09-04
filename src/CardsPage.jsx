@@ -1,3 +1,4 @@
+/* global process */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router';
@@ -26,7 +27,7 @@ export const CardsPage = () => {
 
     useEffect(() => {
         const makeReq = ({token, images}) => {
-            axios.get(`https://z7j4d4fyzxx253sgav4gdo2bby0ozjrn.lambda-url.eu-west-2.on.aws${token ? `?token=${encodeToken(token)}` : ''}`).then(({data}) => {
+            axios.get(`https://z7j4d4fyzxx253sgav4gdo2bby0ozjrn.lambda-url.eu-west-2.on.aws?variant=${process.env.VERSION}${token ? `&token=${encodeToken(token)}` : ''}`).then(({data}) => {
                 setFirstRequest(true);
                 images = [...images, ...data.items];
                 if(data.nextToken) {
@@ -36,10 +37,9 @@ export const CardsPage = () => {
             })
         };
         makeReq({images: []});
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const filteredImageList = imageList.filter(({key}) => !selectedCard?.length || key.startsWith(`${selectedCard}/`));
+    const filteredImageList = imageList.filter(({key}) => !selectedCard?.length || key.startsWith(`${process.env.VERSION}/${selectedCard}/`));
                 
 
     const cards = filteredImageList.map(({url}) => {
