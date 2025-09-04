@@ -8,7 +8,7 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: build   # or dist, depending on your framework
+    baseDirectory: dist   # or dist, depending on your framework
     files:
       - '**/*'
   cache:
