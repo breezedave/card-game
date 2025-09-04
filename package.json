@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "set VERSION=wedding&& vite",
     "dev:vq": "set VERSION=vq&& vite",
-    "build": "vite build",
+    "build": "VERSION=wedding&& vite build",
+    "build:vq": "VERSION=vq&& vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

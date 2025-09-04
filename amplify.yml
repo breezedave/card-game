@@ -6,7 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - VERSION=wedding&& npm run build
+        - npm run build
   artifacts:
     baseDirectory: dist   # or dist, depending on your framework
     files:
